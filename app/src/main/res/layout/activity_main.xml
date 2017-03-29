@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <EditText
+          android:id="@+id/targetAddress"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:hint="请输入您要去的地点"/>
+      <Button
+          android:id="@+id/navBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="去这里"/>
+
+   </LinearLayout>
+   <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <com.amap.api.maps.MapView
+         android:id="@+id/map"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
+      <ToggleButton
+         android:id="@+id/toggleBtn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="top|right"
+         android:textOff="普通地图"
+         android:textOn="卫星地图"
+         android:checked="false"/>
+      <TextView
+         android:id="@+id/address_text"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom"
+         android:gravity="center"
+         android:text="中国"/>
+   </FrameLayout>
+</LinearLayout>
